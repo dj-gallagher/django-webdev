@@ -1,0 +1,17 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'player/style.css' %}">
+
+<head>
+    <title>Player Home</title>
+</head>
+
+<h1>Welcome to the Album Player</h1>
+
+<body>
+    <ul>
+        <li><a href="{% url 'player:index' %}">Home</a></li>
+        <li><a href="{% url 'player:user' %}">User</a></li>
+        <li><a href="{% url 'player:authorize' %}">Authorize</a></li>
+    </ul>
+</body>

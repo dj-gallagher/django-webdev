@@ -1,0 +1,16 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'spotify/style.css' %}">
+
+<head>
+    <title>Spotify Player Home</title>
+</head>
+
+<h1>Welcome to the Spotify Player</h1>
+
+<body>
+    <ul>
+        <li><a href="{% url 'spotify:get-auth-url' %}">Authenticate</a></li>
+        <li><a href="{% url 'spotify:albums' %}">Albums</a></li>
+    </ul>
+</body>

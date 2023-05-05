@@ -1,0 +1,18 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'album_player_app/style.css' %}">
+
+<head>
+    <title>Album Player</title>
+    <meta name="description" content="Page for playing albums">
+    <meta name="keywords" content="album player template">
+</head>
+<body>
+Here are your albums:
+
+{% for pl in playlist_list %}
+    <ul>
+        <li>{{pl}} </li>
+    </ul>
+{% endfor %}
+</body>

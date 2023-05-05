@@ -1,0 +1,24 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'spotify/style.css' %}">
+
+<head>
+    <title>Spotify User Albums</title>
+</head>
+
+<h1>Here are your albums:</h1>
+
+<body>
+
+<ul>
+    {% if user_albums %}
+    {% for item in user_albums %}
+    <li><a href={{ item.uri }}><button>{{ item.name }}</button></a></li>
+    {% endfor %}
+</ul>
+{% else %}
+    <p>No albums are available.</p>
+{% endif %}
+
+
+</body>
